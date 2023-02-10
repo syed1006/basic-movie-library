@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .barchart-container{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin: 20px;
+        }
+        .barchart-container>div{
+            height: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .barchart-container>div>span:first-child{
+            display: inline-block;
+            width: 80px;
+        }
+        .barchart-container>div>span:last-child{
+            display: inline-block;
+            text-align: center;
+            width:20px;
+        }
+        #action{
+            background-color: rgb(252, 145, 145);
+        }
+        #adventure{
+            background-color: rgb(148, 148, 255);
+        }
+        #animation{
+            background-color: rgb(244, 208, 140);
+        }
+        #comedy{
+            background-color: rgb(252, 252, 114);
+        }
+        #crime{
+            background-color: rgb(110, 243, 243);
+        }
+        #drama{
+            background-color: rgb(136, 239, 136);
+        }
+        #thriller{
+            background-color: rgb(254, 153, 254);
+        }
+        #western{
+            background-color: rgb(195, 122, 248);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <input type="text" id="title" placeholder="Enter title.">
+        <input type="text" id="genre" placeholder="Enter genre.">
+        <select  id="search-by" >
+            <option value="title">title</option>
+            <option value="genre">genre</option>
+            <option value="both">both</option>
+            <option value="all">All movies</option>
+        </select>
+        <button id="search">Search</button>
+        <button id="title-sort">SortByTitle</button>
+        <button id="genre-sort">SortByGenre</button>
+        <div class="barchart-container">
+            <div><span>Action</span><span id="action"></span></div>
+            <div><span>Adventure</span><span id="adventure"></span></div>
+            <div><span>Animation</span><span id="animation"></span></div>
+            <div><span>Comedy</span><span  id="comedy"></span></div>
+            <div><span>Crime</span><span id="crime"></span></div>
+            <div><span>Drama</span><span id="drama"></span></div>
+            <div><span>Thriller</span><span id="thriller"></span></div>
+            <div><span>Wester</span> <span id="western"></span></div>
+        </div>
+        <ul id="results"></ul>
+
+    </main>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
